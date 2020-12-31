@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nice-pass-word</title>
+    <style>
+        textarea{
+            display: block;
+            width: 100%;
+            height: 150px;
+            border: none;
+            resize: none;
+            outline: none;
+            margin: 10px 0;
+            overflow: hidden;
+            line-height: 1.5;
+        }
+        fieldset{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="demo">
+   
+    <fieldset>
+        <legend>初始化</legend>
+        <textarea style="height:60px">
+        <input type="text" id="demo">
+        <input type="text" id="demo" value="12"> //带初始值
+        let input = new NicePassWord('#demo') // new NicePassWord(selector,opts) 
+        </textarea>
+    </fieldset>
+    <fieldset>
+        <legend>默认参数</legend>
+        <textarea style="height:110px">
+         opts = {
+            type = 'password',
+            symbol = '*',
+            callback = () => {},
+            pattern = /([\u4e00-\u9fa5])/g
+         }
+        </textarea>
+    </fieldset>
+    <fieldset>
+        <legend>改变type</legend>
+        <button onclick="changeType()">now is password</button>
+        <textarea style="height:110px">
+        function changeType(e) {
+            e = e || window.event;
+            let type = input.type === 'text' ? 'password' : 'text';
+            input.$changeType(type);
+            e.target.innerText = `now is ${type}`
+        }
+        </textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>设置属性</legend>
+        值 <input type="text" id="setvalue">  <button onclick="setvalue()">设置</button>
+        <textarea style="height:80px">
+        function setvalue(){
+            let value = document.querySelector('#setvalue').value;
+            input.$setValue(value)
+        }
+        </textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>设置属性</legend>
+        值: <span id="showvalue"></span>  <button onclick="getvalue()">获取</button>
+        <textarea style="height:80px">
+        function setvalue(){
+            let value = document.querySelector('#setvalue').value;
+            input.$setValue(value)
+        }
+        </textarea>
+    </fieldset>
+    <script src="./index.js"></script>
+    <script>
+        // 基础用法
+        let input = new NicePassWord('#demo')
+        function changeType (e) {
+            e = e || window.event;
+            let type = input.type === 'text' ? 'password' : 'text';
+            input.$changeType(type);
+            e.target.innerText = `now is ${type}`
+        }
+
+        function setvalue(){
+            let value = document.querySelector('#setvalue').value;
+            input.$setValue(value)
+        }
+
+        function getvalue(){
+            document.querySelector('#showvalue').innerText = input.value;
+        }
+    </script>
+</body>
+
+</html>

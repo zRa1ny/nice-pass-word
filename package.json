@@ -1,0 +1,32 @@
+{
+  "name": "nice-pass-word",
+  "version": "1.0.1",
+  "description": "基于原生的password，支持无痕密码模式（无填充，无记录，不会触发浏览器记住密码操作）",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zRa1ny/nice-pass-word.git"
+  },
+  "keywords": [
+    "pass-word",
+    "nice-pass-wrod"
+  ],
+  "author": "zRainy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zRa1ny/nice-pass-word/issues"
+  },
+  "homepage": "https://github.com/zRa1ny/nice-pass-word#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
