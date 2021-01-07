@@ -1,7 +1,7 @@
 {
   "name": "nice-pass-word",
-  "version": "1.0.2",
-  "description": "基于原生的password，支持无痕密码模式（无填充，无记录，不会触发浏览器记住密码操作）",
+  "version": "1.0.3",
+  "description": "基于原生javascript的实现的密码框，支持无痕密码模式（无填充，无记录，不会触发浏览器记住密码操作），兼容主流浏览器及ie，适用于任何框架。",
   "main": "lib/index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,10 @@
   },
   "keywords": [
     "pass-word",
-    "nice-pass-wrod"
+    "password",
+    "nicepassword",
+    "nice-pass-wrod",
+    "nice pass wrod"
   ],
   "author": "zRainy",
   "license": "ISC",
