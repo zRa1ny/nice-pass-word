@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nice-pass-word</title>
     <style>
-        textarea{
+        textarea {
             display: block;
             width: 100%;
             height: 150px;
@@ -17,7 +17,8 @@
             overflow: hidden;
             line-height: 1.5;
         }
-        fieldset{
+
+        fieldset {
             margin: 10px;
         }
     </style>
@@ -25,7 +26,7 @@
 
 <body>
     <input type="text" id="demo" value="12">
-   
+
     <fieldset>
         <legend>初始化</legend>
         <textarea style="height:60px">
@@ -60,7 +61,7 @@
 
     <fieldset>
         <legend>设置属性</legend>
-        值 <input type="text" id="setvalue">  <button onclick="setvalue()">设置</button>
+        值 <input type="text" id="setvalue"> <button onclick="setvalue()">设置</button>
         <textarea style="height:80px">
         function setvalue(){
             let value = document.querySelector('#setvalue').value;
@@ -71,7 +72,7 @@
 
     <fieldset>
         <legend>设置属性</legend>
-        值: <span id="showvalue"></span>  <button onclick="getvalue()">获取</button>
+        值: <span id="showvalue"></span> <button onclick="getvalue()">获取</button>
         <textarea style="height:80px">
         function setvalue(){
             let value = document.querySelector('#setvalue').value;
@@ -79,24 +80,22 @@
         }
         </textarea>
     </fieldset>
-    <!-- <script src="./index.js"></script> -->
-    <script src="../dist/nice-password.umd.js"></script>
-    <script>
-        // 基础用法
-        let input = new NicePassWord('#demo',{ symbol:"%"})
-        function changeType (e) {
+    <script type="module">
+        import NicePassWord from './index.js'
+        let input = new NicePassWord('#demo', { symbol: "%" })
+        function changeType(e) {
             e = e || window.event;
             let type = input.type === 'text' ? 'password' : 'text';
             input.$changeType(type);
             e.target.innerText = `now is ${type}`
         }
 
-        function setvalue(){
+        function setvalue() {
             let value = document.querySelector('#setvalue').value;
             input.$setValue(value)
         }
 
-        function getvalue(){
+        function getvalue() {
             document.querySelector('#showvalue').innerText = input.value;
         }
     </script>

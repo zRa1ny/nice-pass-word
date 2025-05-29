@@ -2,11 +2,16 @@
   "name": "nice-pass-word",
   "version": "1.0.3",
   "description": "基于原生javascript的实现的密码框，支持无痕密码模式（无填充，无记录，不会触发浏览器记住密码操作），兼容主流浏览器及ie，适用于任何框架。",
-  "main": "lib/index.min.js",
+  "main": "./dist/nice-password.cjs.min.js",
+  "module": "./dist/nice-password.es.min.js",
+  "browser": "./dist/nice-password.umd.min.js",
+  "files": [
+    "dist/",
+    "README.md"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "vite": "vite build"
+    "dev": "vite",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -26,15 +31,16 @@
   },
   "homepage": "https://github.com/zRa1ny/nice-pass-word#readme",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-es2015": "^6.24.1",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^7.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
+    "@babel/preset-env": "^7.27.2",
     "vite": "^6.3.5"
   },
-  "dependencies": {
-    "terser": "^5.40.0"
+  "browserslist": [
+    "ie >= 8",
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ],
+  "peerDependencies": {
+    "core-js": "^3.0.0"
   }
 }
