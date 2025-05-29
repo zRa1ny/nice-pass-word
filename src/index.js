@@ -8,17 +8,21 @@
         this[name] = definition()
     }
 })('NicePassWord', function () {
-    function NicePassWord(id, {
+    function NicePassWord(input, {
         type = 'password',
         symbol = '*',
-        callback = () => {},
+        callback = () => { },
         pattern = /([\u4e00-\u9fa5])/g
     } = {}) {
         let _this = this;
-        _this.input = document.querySelector(id);
-        if (!_this.input || _this.input.tagName.toLowerCase() != 'input' || _this.input.type === 'password') {
-            throw new Error("请传一个type为text的input的id！");
-            return;
+        if (typeof input === 'string') {
+            _this.input = document.getElementById(input.indexOf("#") === 0 ? input.substr(1) : input);
+        } else {
+            _this.input = input;
+        }
+
+        if (!_this.input || !_this.input.tagName || _this.input.tagName.toLowerCase() != 'input' || _this.input.type === 'password') {
+            throw new Error("请传一个type为text的input的id或HTMLInputElement！");
         }
         _this.input.valueProxy = "";
         _this.callback = callback;
