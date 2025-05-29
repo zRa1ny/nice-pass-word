@@ -31,7 +31,7 @@ export default defineConfig({
             formats: ["es", "cjs", 'umd'],
             fileName: (format) => `nice-password.${format}.min.js`
         },
-        minify: false,
+        minify: true,
     },
     server: {
         open: 'src/index.html'

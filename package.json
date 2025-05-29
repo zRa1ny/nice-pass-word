@@ -1,48 +1,13 @@
 {
-  "name": "nice-pass-word",
-  "version": "1.0.3",
-  "description": "基于原生javascript的实现的密码框，支持无痕密码模式（无填充，无记录，不会触发浏览器记住密码操作），兼容主流浏览器及ie，适用于任何框架。",
-  "main": "./dist/nice-password.cjs.min.js",
-  "module": "./dist/nice-password.es.min.js",
-  "browser": "./dist/nice-password.umd.min.js",
-  "files": [
-    "dist/",
-    "README.md"
-  ],
+  "name": "nice-pass-word-workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zRa1ny/nice-pass-word.git"
-  },
-  "keywords": [
-    "pass-word",
-    "password",
-    "nicepassword",
-    "nice-pass-wrod",
-    "nice pass wrod"
-  ],
-  "author": "zRainy",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zRa1ny/nice-pass-word/issues"
-  },
-  "homepage": "https://github.com/zRa1ny/nice-pass-word#readme",
-  "devDependencies": {
-    "@babel/core": "^7.27.3",
-    "@babel/preset-env": "^7.27.2",
-    "@rollup/plugin-babel": "^6.0.4",
-    "vite": "^6.3.5"
-  },
-  "browserslist": [
-    "ie >= 8",
-    "last 2 versions",
-    "> 1%",
-    "not dead"
-  ],
-  "peerDependencies": {
-    "core-js": "^3.0.0"
-  }
+  "packageManager": "pnpm@10.11.0"
 }
