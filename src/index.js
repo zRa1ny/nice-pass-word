@@ -28,6 +28,7 @@
         _this.callback = callback;
         _this.type = type;
         _this.symbol = symbol;
+        _this.symbolRegExp = new RegExp(_this.symbol.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "g")
         _this.pattern = pattern;
         _this.cursor = 0;
         _this.isInit = false;
@@ -132,9 +133,11 @@
 
 
         if (clen > 0) {
-            var inArr = cvalueArr.join("").replace(/\*/g, "").split("");
+            var inArr = cvalueArr.join("").replace(this.symbolRegExp, "").split("");
+            // var inArr = cvalueArr.join("").replace(/\%/g, "").split("");
             var right = cvalueArr.length - cursor > 0 ? ovalueArr.slice(-(cvalueArr.length - cursor)) : [];
             ovalueArr = [].concat(ovalueArr.slice(0, cursor - inArr.length), inArr, right);
+            console.log(inArr, this.symbolRegExp)
         }
 
         if (clen < 0) {
@@ -142,7 +145,7 @@
         }
 
         cvalueArr.forEach(function (value, index) {
-            if (value != "*") {
+            if (value != _this.symbol) {
                 ovalueArr[index] = value;
             }
         });
