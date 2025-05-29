@@ -1,0 +1,31 @@
+{
+    "name": "nice-password-vue",
+    "version": "1.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview",
+      "build:lib": "vite build",
+      "docs": "vite --config vite.docs.config.ts"
+    },
+    "dependencies": {
+      "vue": "^3.3.4"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^4.2.3",
+      "typescript": "^5.0.2",
+      "vite": "^4.4.5"
+    },
+    "main": "dist/nice-password-vue.umd.js",
+    "module": "dist/nice-password-vue.es.js",
+    "exports": {
+      ".": {
+        "import": "./dist/nice-password-vue.es.js",
+        "require": "./dist/nice-password-vue.umd.js"
+      }
+    },
+    "files": [
+      "dist"
+    ],
+    "types": "dist/index.d.ts"
+  }

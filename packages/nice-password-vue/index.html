@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV</title>
+</head>
+
+<body>
+    <div id="app">
+        <nice-password></nice-password>
+        12
+    </div>
+
+    <!-- 使用Vite方式引入Vue应用 -->
+    <script type="module">
+        import { createApp } from 'vue/dist/vue.esm-bundler.js'
+        import ViteComponentLibrary from './src/index'
+        const app = createApp()
+        app.use(ViteComponentLibrary)
+        app.mount('#app')
+    </script>
+</body>
+
+</html>
