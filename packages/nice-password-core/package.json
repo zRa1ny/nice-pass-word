@@ -1,5 +1,5 @@
 {
-  "name": "nice-pass-word",
+  "name": "nice-password-core",
   "version": "1.0.3",
   "description": "基于原生javascript的实现的密码框，支持无痕密码模式（无填充，无记录，不会触发浏览器记住密码操作），兼容主流浏览器及ie，适用于任何框架。",
   "main": "./dist/nice-password.cjs.min.js",
