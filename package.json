@@ -5,7 +5,8 @@
   "main": "lib/index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
+    "build": "gulp",
+    "vite": "vite build"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,10 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^7.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "terser": "^5.40.0"
   }
 }

@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <input type="text" id="demo">
+    <input type="text" id="demo" value="12">
    
     <fieldset>
         <legend>初始化</legend>
@@ -79,10 +79,11 @@
         }
         </textarea>
     </fieldset>
-    <script src="./index.js"></script>
+    <!-- <script src="./index.js"></script> -->
+    <script src="../dist/nice-password.umd.js"></script>
     <script>
         // 基础用法
-        let input = new NicePassWord('#demo')
+        let input = new NicePassWord('#demo',{ symbol:"%"})
         function changeType (e) {
             e = e || window.event;
             let type = input.type === 'text' ? 'password' : 'text';
