@@ -1,13 +1,49 @@
 {
   "name": "nice-pass-word",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "基于原生javascript的实现的密码框，支持无痕密码模式（无填充，无记录，不会触发浏览器记住密码操作），兼容主流浏览器及ie，适用于任何框架。",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "main": "./packages/nice-password-core/dist/nice-password.umd.min.js",
+  "exports": {
+    ".": {
+      "browser": "./packages/nice-password-core/dist/nice-password.umd.min.js",
+      "require": "./packages/nice-password-core/dist/nice-password.cjs.min.js",
+      "default": "./packages/nice-password-core/dist/nice-password.es.min.js"
+    },
+    "./vue": {
+      "browser": "./packages/nice-password-vue/dist/nice-password.umd.min.js",
+      "require": "./packages/nice-password-vue/dist/nice-password.cjs.min.js",
+      "default": "./packages/nice-password-vue/dist/nice-password.es.min.js"
+    },
+    "./react": {
+      "browser": "./packages/nice-password-react/dist/nice-password.umd.min.js",
+      "require": "./packages/nice-password-react/dist/nice-password.cjs.min.js",
+      "default": "./packages/nice-password-react/dist/nice-password.es.min.js"
+    }
+  },
+  "files": [
+    "./packages/nice-password-core/dist/",
+    "./packages/nice-password-vue/dist/",
+    "./packages/nice-password-react/dist/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zRa1ny/nice-pass-word.git"
+  },
+  "keywords": [
+    "password",
+    "nice-pass-wrod",
+    "nicepassword",
+    "nice pass wrod"
+  ],
+  "author": "zRainy",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zRa1ny/nice-pass-word/issues"
+  },
+  "homepage": "https://github.com/zRa1ny/nice-pass-word#readme",
   "packageManager": "pnpm@10.11.0"
 }
