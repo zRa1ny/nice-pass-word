@@ -9,7 +9,8 @@ export default defineConfig({
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
             name: 'nice-password-vue',
-            fileName: (format) => `nice-password-vue.${format}.js`
+            formats: ["es", "cjs", 'umd'],
+            fileName: (format) => `nice-password.${format}.min.js`
         },
         rollupOptions: {
             // 确保外部化处理那些你不想打包进库的依赖

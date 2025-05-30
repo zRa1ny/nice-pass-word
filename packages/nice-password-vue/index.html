@@ -9,15 +9,21 @@
 
 <body>
     <div id="app">
-        <nice-password></nice-password>
-        12
+        <nice-password v-model="value"></nice-password>
+        {{value}}
     </div>
 
     <!-- 使用Vite方式引入Vue应用 -->
     <script type="module">
         import { createApp } from 'vue/dist/vue.esm-bundler.js'
         import ViteComponentLibrary from './src/index'
-        const app = createApp()
+        const app = createApp({
+            data: () => {
+                return {
+                    value: undefined
+                }
+            }
+        })
         app.use(ViteComponentLibrary)
         app.mount('#app')
     </script>

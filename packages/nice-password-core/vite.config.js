@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import babel from '@rollup/plugin-babel';
+import { terser } from 'rollup-plugin-terser';
 export default defineConfig({
     plugins: [
         babel({
@@ -17,7 +18,7 @@ export default defineConfig({
                             ]
                         },
                         useBuiltIns: false,
-                        corejs: 3,
+                        // corejs: 3,
                     }
                 ]
             ],
@@ -29,10 +30,24 @@ export default defineConfig({
             entry: 'src/index.js',
             name: 'NicePassWord',
             formats: ["es", "cjs", 'umd'],
-            fileName: (format) => `nice-password.${format}.min.js`
+            fileName: (format) => `nice-password.${format}.min.js`,
         },
-        minify: true,
+        minify: false,
+        rollupOptions: {
+            output: {
+                plugins: [
+                    terser({
+                        mangle: false,
+                        compress: {
+                            // drop_console: true,
+                            pure_funcs: ['console.log', 'console.warn']
+                        }
+                    })
+                ],
+            }
+        }
     },
+
     server: {
         open: 'src/index.html'
     }

@@ -182,4 +182,6 @@ NicePassWord.prototype.$changeType = function (type) {
     this.$setValue(this.value);
 }
 
+NicePassWord.prototype.$setType = NicePassWord.prototype.$changeType
+
 export default NicePassWord

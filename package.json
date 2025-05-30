@@ -8,19 +8,19 @@
   "main": "./packages/nice-password-core/dist/nice-password.umd.min.js",
   "exports": {
     ".": {
-      "browser": "./packages/nice-password-core/dist/nice-password.umd.min.js",
+      "import": "./packages/nice-password-core/dist/nice-password.es.min.js",
       "require": "./packages/nice-password-core/dist/nice-password.cjs.min.js",
-      "default": "./packages/nice-password-core/dist/nice-password.es.min.js"
+      "default": "./packages/nice-password-core/dist/nice-password.umd.min.js"
     },
     "./vue": {
-      "browser": "./packages/nice-password-vue/dist/nice-password.umd.min.js",
       "require": "./packages/nice-password-vue/dist/nice-password.cjs.min.js",
-      "default": "./packages/nice-password-vue/dist/nice-password.es.min.js"
+      "import": "./packages/nice-password-vue/dist/nice-password.es.min.js",
+      "default": "./packages/nice-password-vue/dist/nice-password.umd.min.js"
     },
     "./react": {
-      "browser": "./packages/nice-password-react/dist/nice-password.umd.min.js",
       "require": "./packages/nice-password-react/dist/nice-password.cjs.min.js",
-      "default": "./packages/nice-password-react/dist/nice-password.es.min.js"
+      "import": "./packages/nice-password-react/dist/nice-password.es.min.js",
+      "default": "./packages/nice-password-react/dist/nice-password.umd.min.js"
     }
   },
   "files": [
