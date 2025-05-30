@@ -5,9 +5,6 @@ Password.install = (app: App) => {
     app.component("nice-password", Password)
     // 指定模式
 }
-
-console.log('...')
-
 export {
     Password
 }
